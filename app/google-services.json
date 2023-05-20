@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "783887055740",
+    "project_id": "pf-mobile-2e7f3",
+    "storage_bucket": "pf-mobile-2e7f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783887055740:android:b7c853bb5e7aef345c82f9",
+        "android_client_info": {
+          "package_name": "br.com.uniritter.app1_2023_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783887055740-rea8tsr9dcbr5tc18sk92h1obpvju8l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6EqLT7951PByw1vUa1v6ouJcYxdUk-XY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783887055740-n7sjn9e5g821hv2h39lnr0do20g7bfi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

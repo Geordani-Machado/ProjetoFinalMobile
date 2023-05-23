@@ -9,13 +9,19 @@ public class Pokemon {
 
     private Integer level;
     private Habilidades habilidades;
+    private Integer IDHabilidades;
 
-    public Pokemon(Integer id, String nome, Integer idade, Integer vida, Habilidades habilidades, Integer level) {
+    public Pokemon(Integer id ,String nome, Integer idade, Integer vida, Habilidades habilidades, Integer level) {
         this.id = id;
         this.nome = nome;
         this.idade = idade;
         this.vida = vida;
         this.habilidades = habilidades;
+    }
+
+    public Pokemon(int id, String nome, int idade, int vida, int level) {
+        this.id = id;
+        this.S
     }
 
     public Integer getId(){ return id;}

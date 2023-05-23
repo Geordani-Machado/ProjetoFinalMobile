@@ -17,20 +17,23 @@ import br.com.uniritter.app1_2023_1.models.Pokemon;
 public class PokemonService {
 
     //cria objeto User apartir de um JSON
-    public static Pokemon albumsFromJson(JSONObject json) {
+    public static Pokemon pokemonFromJson(JSONObject json) {
         Pokemon pokemon = null;
         try {
             pokemon = new Pokemon(
                     json.getInt("id"),
-                    json.getString("title"));
+                    json.getString("nome"),
+                    json.getInt("idade"),
+                    json.getInt("vida"),
+                    json.getInt("level")
+                    );
 
         } catch (JSONException e) {
             System.out.println("erro no Json. Fogo no parquinho "+e.getMessage());
         }
-        return album;
+        return pokemon;
     }
-    public static void getAlbum(Context contexto, int id, ServiceDone callback) {
-    }
+
     //buscar todos os users no servidor REST
     public static void getPokemonbyIDouName(String idName, Context contexto, ServiceDone callback) {
 
@@ -57,6 +60,10 @@ public class PokemonService {
         System.out.println("antes de ir para a queue");
         queue.add(request);
         System.out.println("depois de ir para a queue");
+    }
+
+    public static void findPokeFrend(){
+
     }
 
 

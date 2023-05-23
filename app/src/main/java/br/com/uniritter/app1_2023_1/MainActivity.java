@@ -15,25 +15,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.button).setOnClickListener(view -> {
-            Toast.makeText(this, "Oieeee!", Toast.LENGTH_LONG).show();
-        });
-        Button btn1_2 = findViewById(R.id.button1_2);
+
+        Button Entrar = findViewById(R.id.Btn_Entrar);
+        Button Cadastrar = findViewById(R.id.Btn_Cadastrar);
+
         //btn1_2.setOnClickListener(this);
-        btn1_2.setOnClickListener(new View.OnClickListener() {
+        Entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Activity2.class);
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        Cadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CadastrarActivity.class);
             }
         });
 
     }
 
     @Override
-    public void onClick(View view) {
-       if (view.getId() == R.id.button1_2)  {
+    public void onClick(View v) {
 
-       }
     }
 }

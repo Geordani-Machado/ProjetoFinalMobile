@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import br.com.uniritter.app1_2023_1.R;
-import br.com.uniritter.app1_2023_1.models.User;
 
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
     private List<User> usersList;

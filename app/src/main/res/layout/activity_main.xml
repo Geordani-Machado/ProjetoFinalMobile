@@ -9,21 +9,21 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="263dp"
-        android:layout_height="84dp"
+        android:layout_width="256dp"
+        android:layout_height="58dp"
         android:fontFamily="@font/bangers"
         android:text="TAMAGOTCHI"
         android:textColor="#0C85E6"
-        android:textSize="60sp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintVertical_bias="0.218" />
 
     <Button
-        android:id="@+id/button1_2"
+        android:id="@+id/Btn_Entrar"
         android:layout_width="165dp"
         android:layout_height="74dp"
         android:fontFamily="@font/bangers"
@@ -34,14 +34,14 @@
         tools:layout_editor_absoluteY="641dp" />
 
     <Button
-        android:id="@+id/button1_"
+        android:id="@+id/Btn_Cadastrar"
         android:layout_width="165dp"
         android:layout_height="74dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/bangers"
         android:text="CADASTRAR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button1_2"
+        app:layout_constraintStart_toEndOf="@+id/Btn_Entrar"
         tools:layout_editor_absoluteY="641dp" />
 
     <ImageView
@@ -49,9 +49,19 @@
         android:layout_width="291dp"
         android:layout_height="203dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/image"
         tools:layout_editor_absoluteY="2dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="338dp"
+        android:layout_height="417dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/png_clipart_pikachu_ash_ketchum_pokemon_go_pikachu_mammal_carnivoran_removebg_preview"
+        tools:layout_editor_absoluteY="213dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="88dp"
-        android:layout_height="42dp"
+        android:layout_width="118dp"
+        android:layout_height="49dp"
         android:fontFamily="@font/bangers"
         android:text="Plantinha"
         android:textColor="#2196F3"
@@ -32,54 +32,23 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="671dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Loja"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="671dp" />
-
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="731dp"
-        app:constraint_referenced_ids="button5,button2"
+        app:constraint_referenced_ids="button5"
         app:layout_constraintBottom_toBottomOf="parent" />
-
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="284dp"
-        android:layout_height="271dp"
-        android:scaleType="fitCenter"
-        android:src="@tools:sample/avatars"
-        app:srcCompat="@drawable/ovo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="374dp" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="414dp"
-        android:layout_height="60dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="668dp"
         android:background="#2196F3"
         android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="671dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/hohe_button"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="645dp" />
+        tools:layout_editor_absoluteX="-2dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -101,7 +70,8 @@
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="56dp" />
+        tools:layout_editor_absoluteX="56dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
@@ -113,7 +83,8 @@
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp" />
+        tools:layout_editor_absoluteX="24dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView9"
@@ -125,7 +96,8 @@
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="69dp" />
+        tools:layout_editor_absoluteX="69dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

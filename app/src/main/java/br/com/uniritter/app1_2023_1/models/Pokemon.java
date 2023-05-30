@@ -21,7 +21,6 @@ public class Pokemon {
 
     public Pokemon(int id, String nome, int idade, int vida, int level) {
         this.id = id;
-        this.S
     }
 
     public Integer getId(){ return id;}

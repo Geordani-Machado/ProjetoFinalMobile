@@ -16,7 +16,7 @@ import br.com.uniritter.app1_2023_1.models.Pokemon;
 
 public class PokemonService {
 
-    //cria objeto User apartir de um JSON
+    //cria objeto User apartir de um JSON - trasendo informaçoes da api
     public static Pokemon pokemonFromJson(JSONObject json) {
         Pokemon pokemon = null;
         try {

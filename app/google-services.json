@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "783887055740",
-    "project_id": "pf-mobile-2e7f3",
-    "storage_bucket": "pf-mobile-2e7f3.appspot.com"
+    "project_number": "104651031259",
+    "project_id": "poketamagochi",
+    "storage_bucket": "poketamagochi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:783887055740:android:b7c853bb5e7aef345c82f9",
+        "mobilesdk_app_id": "1:104651031259:android:c218cffab92a79c24482fe",
         "android_client_info": {
           "package_name": "br.com.uniritter.app1_2023_1"
         }
       },
       "oauth_client": [
         {
-          "client_id": "783887055740-rea8tsr9dcbr5tc18sk92h1obpvju8l7.apps.googleusercontent.com",
+          "client_id": "104651031259-6t0rm7innmlkgg28nh6vh7p1l3o8fgtr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC6EqLT7951PByw1vUa1v6ouJcYxdUk-XY"
+          "current_key": "AIzaSyCVdzetrFDgicEEKAokVZB3TInjHdv69Hs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "783887055740-n7sjn9e5g821hv2h39lnr0do20g7bfi9.apps.googleusercontent.com",
+              "client_id": "104651031259-6t0rm7innmlkgg28nh6vh7p1l3o8fgtr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

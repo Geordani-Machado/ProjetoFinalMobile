@@ -23,6 +23,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:background="#FFC107"
         android:backgroundTint="#FFC107"
         android:backgroundTintMode="add"
@@ -37,15 +38,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toEndOf="@+id/edName"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FFC107"
-        app:strokeColor="#FFC107"
-        tools:layout_editor_absoluteY="45dp" />
+        app:strokeColor="#FFC107" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/usersRV"
-        android:layout_width="409dp"
-        android:layout_height="572dp"
+        android:id="@+id/PokemonRV"
+        android:layout_width="408dp"
+        android:layout_height="557dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,12 +69,17 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="150dp"
-        android:layout_height="411dp"
+        android:layout_width="148dp"
+        android:layout_height="434dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
         android:background="#FFC107"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="107dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btBuscaTodos" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -82,8 +90,8 @@
         android:textColor="#050505"
         android:textSize="20sp"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="127dp" />
+        app:layout_constraintStart_toStartOf="@+id/checkBox9"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <CheckBox
         android:id="@+id/checkBox9"
@@ -93,8 +101,20 @@
         android:text="4º Geração"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="sans-serif-black"
+        android:text="5º Geração"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -104,8 +124,8 @@
         android:text="3º Geração"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
 
     <CheckBox
         android:id="@+id/checkBox8"
@@ -115,19 +135,20 @@
         android:text="2º Geração"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="175dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:fontFamily="sans-serif-black"
         android:text="Água"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox9" />
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -137,35 +158,34 @@
         android:text="Fogo"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
 
     <CheckBox
         android:id="@+id/checkBox6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Terra"
+        android:text="Planta"
         android:textColor="#050505"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="417dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="Ar"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
 
     <androidx.constraintlayout.widget.Group
+        android:id="@+id/Filtros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="view,checkBox4,checkBox5,checkBox2,checkBox,checkBox8,checkBox6,checkBox9,checkBox7" />
+        app:constraint_referenced_ids="view,checkBox4,checkBox5,checkBox2,checkBox,checkBox8,checkBox6,checkBox9,checkBox3" />
+
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

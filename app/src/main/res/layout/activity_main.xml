@@ -26,23 +26,26 @@
         android:id="@+id/Btn_Entrar"
         android:layout_width="165dp"
         android:layout_height="74dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="@font/bangers"
         android:text="ENTRAR"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="641dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <Button
         android:id="@+id/Btn_Cadastrar"
         android:layout_width="165dp"
         android:layout_height="74dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/bangers"
         android:text="CADASTRAR"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toEndOf="@+id/Btn_Entrar"
-        tools:layout_editor_absoluteY="641dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -57,11 +60,11 @@
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="338dp"
-        android:layout_height="417dp"
+        android:layout_height="392dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/png_clipart_pikachu_ash_ketchum_pokemon_go_pikachu_mammal_carnivoran_removebg_preview"
-        tools:layout_editor_absoluteY="213dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/png_clipart_pikachu_ash_ketchum_pokemon_go_pikachu_mammal_carnivoran_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

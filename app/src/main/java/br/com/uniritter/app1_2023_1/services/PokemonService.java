@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import br.com.uniritter.app1_2023_1.models.Pokemon;
 
 
+
 public class PokemonService {
 
     //cria objeto User apartir de um JSON - trasendo informaçoes da api
@@ -24,8 +25,7 @@ public class PokemonService {
                     json.getInt("id"),
                     json.getString("nome"),
                     json.getInt("idade"),
-                    json.getInt("vida"),
-                    json.getInt("level")
+                    json.getInt("vida")
                     );
 
         } catch (JSONException e) {
@@ -44,7 +44,7 @@ public class PokemonService {
                     for (int i = 0; i < response.length(); i++) {
                         try {
                             JSONObject json = response.getJSONObject(i);
-                             Pokemon.getInstance().addAlbum( albumsFromJson(json) );
+                             //Pokemon.AddPokemon( );
                         } catch (JSONException e) {
                             System.out.println("Nenhum Pokemon encontrado com esse nome ou ID !"+e.getMessage());
                         }
@@ -56,6 +56,8 @@ public class PokemonService {
                 error->{
                     Toast.makeText(contexto, "Ocorreu uma falha na requisição "+error.getMessage(), Toast.LENGTH_LONG).show();
                 });
+
+
         RequestQueue queue = Volley.newRequestQueue(contexto);
         System.out.println("antes de ir para a queue");
         queue.add(request);

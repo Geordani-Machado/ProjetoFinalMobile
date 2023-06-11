@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/BtnVoltar"
         android:layout_width="61dp"
         android:layout_height="68dp"
         android:backgroundTint="#00FFFFFF"
@@ -22,17 +22,24 @@
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Recuperar Senha"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Entrar" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Entrar"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView18"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Entrar" />
 
     <TextView
         android:id="@+id/textView5"
@@ -46,7 +53,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/BtnVoltar"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
@@ -63,12 +70,15 @@
         android:id="@+id/Txt_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="101dp"
         android:layout_marginTop="284dp"
+        android:layout_marginEnd="101dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Digite o seu e-mail"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/Txt_ConfirmEmail"
@@ -77,8 +87,9 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Confirme o seu e-mail"
-        app:layout_constraintTop_toBottomOf="@+id/Txt_Email"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_Email" />
 
     <EditText
         android:id="@+id/Txt_ConfirmarSenha"
@@ -87,8 +98,9 @@
         android:ems="10"
         android:inputType="textPassword"
         android:text="Digite a sua senha"
-        app:layout_constraintTop_toBottomOf="@+id/Txt_Senha"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_Senha" />
 
     <EditText
         android:id="@+id/Txt_Senha"
@@ -97,8 +109,9 @@
         android:ems="10"
         android:inputType="textPassword"
         android:text="Confirme a sua senha"
-        app:layout_constraintTop_toBottomOf="@+id/Txt_ConfirmEmail"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_ConfirmEmail" />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
@@ -120,7 +133,8 @@
         android:ems="10"
         android:inputType="text"
         android:text="Crie seu Usuário"
-        app:layout_constraintTop_toBottomOf="@+id/Txt_ConfirmarSenha"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Txt_ConfirmarSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

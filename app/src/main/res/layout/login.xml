@@ -8,15 +8,15 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/BtnVoltar"
         android:layout_width="61dp"
         android:layout_height="68dp"
         android:backgroundTint="#00FFFFFF"
         android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/png_transparent_arrow_computer_icons_return_angle_text_triangle_removebg_preview"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView5"
@@ -29,7 +29,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/BtnVoltar"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
@@ -51,8 +51,9 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Digite o seu Email"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/Txt_ConfirmarSenha"
@@ -62,9 +63,10 @@
         android:inputType="textPassword"
         android:text="Digite a sua senha"
         app:layout_constraintBottom_toTopOf="@+id/Btn_Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Txt_Email"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
@@ -81,27 +83,36 @@
         app:srcCompat="@drawable/anime_pokemon_png_transparent" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/Btn_CriarConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:text="Criar Conta"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="530dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView17"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Entrar" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="96dp"
         android:text="Recuperar Senha"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="530dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Entrar" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="2dp"
         android:text="Entre com o Seu Email e Senha"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintBottom_toTopOf="@+id/Txt_Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

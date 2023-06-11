@@ -2,9 +2,9 @@ package br.com.uniritter.app1_2023_1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,11 +32,22 @@ public class CadastrarActivity extends AppCompatActivity {
         TextView ConfirmarSenha = findViewById(R.id.Txt_ConfirmarSenha);
 
         Button Entrar = findViewById(R.id.Btn_Entrar);
+        ImageButton BtnVoltar = findViewById(R.id.BtnVoltar);
+
+        BtnVoltar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+            }
+        });
+
 
 
         Entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ValidarDados();
 
             }
         });
@@ -58,11 +69,11 @@ public class CadastrarActivity extends AppCompatActivity {
         String SenhaConvert = Senha.getText().toString();
 
 
-        if(Email.getText().toString().equals(ConfirmarEmail.toString())){
-           if(Senha.getText().toString().equals(ConfirmarSenha.toString())){
+        if(Email.getText().toString().equals(ConfirmarEmail.getText().toString())){
+           if(Senha.getText().toString().equals(ConfirmarSenha.getText().toString())){
                CriarContaFirebase(EmailConvert, SenhaConvert);
            } else {
-               Toast.makeText(this, "Os Senha não correspondem", Toast.LENGTH_LONG).show();
+               Toast.makeText(this, "As Senhas não correspondem", Toast.LENGTH_LONG).show();
             }
         } else {
             Toast.makeText(this, "Os E-mails não correspondem", Toast.LENGTH_LONG).show();
@@ -75,7 +86,6 @@ public class CadastrarActivity extends AppCompatActivity {
         ).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 startActivity(new Intent(this, ProcurarPokemonActivity.class));
-                finish();
             }else{
                 Toast.makeText(this, "Criação de conta falhou, aguarde e tente novamente! ", Toast.LENGTH_LONG).show();
             }

@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/BtnVoltar"
         android:layout_width="61dp"
         android:layout_height="68dp"
         android:backgroundTint="#00FFFFFF"
@@ -29,7 +29,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/BtnVoltar"
         tools:layout_editor_absoluteY="16dp" />
 
     <Button
@@ -81,7 +81,7 @@
         app:srcCompat="@drawable/anime_pokemon_png_transparent" />
 
     <TextView
-        android:id="@+id/textView15"
+        android:id="@+id/Btn_CriarConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Criar Conta"

@@ -22,21 +22,10 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="220dp" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:text="Batalhar"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="671dp" />
-
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="731dp"
-        app:constraint_referenced_ids="button5"
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <View

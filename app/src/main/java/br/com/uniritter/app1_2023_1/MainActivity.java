@@ -16,22 +16,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        Button Entrar = findViewById(R.id.Btn_Entrar);
-        Button Cadastrar = findViewById(R.id.Btn_Cadastrar);
+        Button entrar = findViewById(R.id.Btn_Entrar);
+        Button cadastrar = findViewById(R.id.Btn_Cadastrar);
 
         //btn1_2.setOnClickListener(this);
-        Entrar.setOnClickListener(new View.OnClickListener() {
+        entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
 
-        Cadastrar.setOnClickListener(new View.OnClickListener() {
+        cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CadastrarActivity.class);
+                Intent intent = new Intent(MainActivity.this, CadastrarActivity.class);
+                startActivity(intent);
             }
         });
 

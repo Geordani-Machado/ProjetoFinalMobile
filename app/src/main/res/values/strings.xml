@@ -4,4 +4,9 @@
     <string name="user">Usuário</string>
     <string name="name">Nome</string>
     <string name="email">E-Mail</string>
+    <string name="pokemon_image">Pokemon Image</string>
+    <string name="pokemon_name">Pokemon Name</string>
+    <string name="escolha_seu_pokemon">Escolha seu Pokemon:</string>
+    <string name="_1_gera_o">1º Geração</string>
+    <string name="_4_gera_o">4º Geração</string>
 </resources>

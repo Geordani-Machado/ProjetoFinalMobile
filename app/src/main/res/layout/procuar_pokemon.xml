@@ -6,12 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".Activity2">
 
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="595dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="89dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edName"
+        tools:layout_editor_absoluteX="2dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/PokemonRV"
+            android:layout_width="405dp"
+            android:layout_height="590dp"
+            android:layout_marginBottom="32dp"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
     <EditText
         android:id="@+id/edName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nome ou ID"
@@ -36,32 +55,20 @@
         android:textColorHint="#FFC107"
         android:textColorLink="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.753"
         app:layout_constraintStart_toEndOf="@+id/edName"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FFC107"
         app:strokeColor="#FFC107" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/PokemonRV"
-        android:layout_width="408dp"
-        android:layout_height="557dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edName" />
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Poke_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/bangers"
-        android:text="Escolha seu Pokemon:"
+        android:text="@string/escolha_seu_pokemon"
         android:textColor="#2196F3"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="1º Geração"
+        android:text="@string/_1_gera_o"
         android:textColor="#050505"
         android:textSize="20sp"
         android:visibility="visible"
@@ -98,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="4º Geração"
+        android:text="@string/_4_gera_o"
         android:textColor="#050505"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -181,11 +188,25 @@
 
     <Button
         android:id="@+id/btn_sair"
+        android:layout_width="94dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="12dp"
+        android:text="Voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_proximo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Sair"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:text="Proximo"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

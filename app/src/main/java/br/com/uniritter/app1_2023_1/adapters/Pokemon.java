@@ -15,9 +15,11 @@ public class Pokemon {
         return Nome;
     }
 
-    public String getUrl() {
-        return Url;
-    }
+
+   public String getUrl() {
+     return Url;
+   }
+
 }
 
 

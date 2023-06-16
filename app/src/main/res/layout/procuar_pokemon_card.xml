@@ -4,20 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="410dp"
-    android:layout_height="149dp"
+    android:layout_height="200dp"
     app:cardCornerRadius="12dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="149dp">
+        android:layout_width="470dp"
+        android:layout_height="199dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/Poke_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="158dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="140dp"
             android:fontFamily="@font/bangers"
             android:text="@string/pokemon_name"
             android:textColor="#2196F3"
@@ -25,16 +27,17 @@
 
         <ImageView
             android:id="@+id/Poke_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="158dp"
             android:layout_marginTop="16dp"
             android:contentDescription="@string/pokemon_image"
             tools:src="@tools:sample/avatars" />
 
 
     </RelativeLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

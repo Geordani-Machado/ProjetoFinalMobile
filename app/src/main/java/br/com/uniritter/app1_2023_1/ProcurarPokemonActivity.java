@@ -10,6 +10,7 @@ import androidx.constraintlayout.widget.Group;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.uniritter.app1_2023_1.adapters.Pokemon;
@@ -18,7 +19,7 @@ import br.com.uniritter.app1_2023_1.adapters.PokemonAdapter;
 public class ProcurarPokemonActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private List<Pokemon> PokemonLista;
+    private List<Pokemon> PokemonLista = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,8 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
         //configuração do adapte
         PokemonAdapter Pokemon = new PokemonAdapter(PokemonLista);
 
-
+        //chamarLista
+        this.CriarPokemonList();
 
         //configurar o recyclerView
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -67,11 +69,13 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
-    public void PokemonList(){
+    public void CriarPokemonList(){
         Pokemon pokemon = new Pokemon("Charmander","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif");
+        this.PokemonLista.add(pokemon);
+
+        pokemon = new Pokemon("Pikachu","https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif");
         this.PokemonLista.add(pokemon);
     }
 

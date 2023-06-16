@@ -44,9 +44,11 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
         holder.PokemonName.setText(pokemon.getNome());
 
 
-        Glide.with(context)
+        Glide.with(holder.PokemonImg)
                 .load(pokemon.getUrl())
                 .into(holder.PokemonImg);
+
+
     }
 
     @Override

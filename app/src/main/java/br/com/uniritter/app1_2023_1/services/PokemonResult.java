@@ -1,6 +1,8 @@
 package br.com.uniritter.app1_2023_1.services;
 
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
 
 public class PokemonResult {
@@ -20,11 +22,23 @@ public class PokemonResult {
     @SerializedName("Img")
     String Img;
 
+    @NonNull
+    @Override
+    public String toString(){
+        return this.id_pokemon+" -> "+this.nome+" url: "+this.Img;
+
+    }
+
+    public PokemonResult(String nome, String url) {
+        this.nome = nome;
+        this.Img = url;
+    }
+
 
     public int getID(){
         return id_pokemon;
     }
-    public String getName(){
+    public String getNome(){
         return nome;
     }
     public Integer getIdade(){
@@ -33,8 +47,10 @@ public class PokemonResult {
     public Integer getVida(){
         return vida;
     }
-    public String getImg(){
+    public String getUrl(){
         return Img;
     }
+
+
 
 }

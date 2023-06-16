@@ -16,13 +16,15 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import br.com.uniritter.app1_2023_1.R;
+import br.com.uniritter.app1_2023_1.models.Pokemon;
+import br.com.uniritter.app1_2023_1.services.PokemonResult;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHolder> {
     private Context context;
 
-    private List<Pokemon> listaPokemons;
+    private List<PokemonResult> listaPokemons;
 
-    public PokemonAdapter(List<Pokemon> lista){
+    public PokemonAdapter(List<PokemonResult> lista){
         this.listaPokemons = lista;
     }
 
@@ -40,7 +42,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Pokemon pokemon = listaPokemons.get(position);
+        PokemonResult pokemon = listaPokemons.get(position);
         holder.PokemonName.setText(pokemon.getNome());
 
 

@@ -33,6 +33,14 @@ public class CadastrarActivity extends AppCompatActivity {
 
         Button Entrar = findViewById(R.id.Btn_Entrar);
         ImageButton BtnVoltar = findViewById(R.id.BtnVoltar);
+        TextView TelaLogin = findViewById(R.id.txt_entrar);
+
+        TelaLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            }
+        });
 
         BtnVoltar.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,8 +49,6 @@ public class CadastrarActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         Entrar.setOnClickListener(new View.OnClickListener() {
             @Override

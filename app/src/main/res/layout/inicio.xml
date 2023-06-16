@@ -88,5 +88,16 @@
         tools:layout_editor_absoluteX="69dp"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="221dp"
+        android:layout_height="195dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="378dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="pokemonImage" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

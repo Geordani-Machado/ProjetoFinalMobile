@@ -3,7 +3,9 @@ package br.com.uniritter.app1_2023_1;
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +35,7 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<PokemonResult> PokemonLista = new ArrayList<>();
 
-    public static final String BASE_URL = "http://192.168.146.237:3000/";
+    public static final String BASE_URL = "http://192.168.220.237:3000/";
 
     // Create interceptor
 
@@ -111,7 +113,8 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
                         Log.d(TAG, "PokeLista: " + PokemonLista);
                     }
                     //configuração do adapte
-                    PokemonAdapter Pokemon = new PokemonAdapter(PokemonLista);
+                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(ProcurarPokemonActivity.this);
+                    PokemonAdapter Pokemon = new PokemonAdapter(PokemonLista , sharedPreferences);
                     recyclerView.setAdapter(Pokemon);
 
                 } else {

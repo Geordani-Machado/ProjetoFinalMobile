@@ -3,6 +3,8 @@ package br.com.uniritter.app1_2023_1.adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,18 +27,25 @@ import br.com.uniritter.app1_2023_1.services.PokemonResult;
 import android.app.Activity;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHolder> {
+
+    private SharedPreferences sharedPreferences;
     private Context context;
+
 
     private List<PokemonResult> listaPokemons;
 
-    public PokemonAdapter(List<PokemonResult> lista){
+    public PokemonAdapter(List<PokemonResult> lista, SharedPreferences sharedPreferences){
+
         this.listaPokemons = lista;
+        this.sharedPreferences = sharedPreferences;
     }
 
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        //sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
         View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.procuar_pokemon_card, parent, false);
         return new MyViewHolder(itemLista);
@@ -66,6 +75,11 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
                 Intent intent = new Intent(v.getContext(), InicioActivity.class);
                 intent.putExtra("Name",listaPokemons.get(position).getNome());
                 intent.putExtra("Url",listaPokemons.get(position).getUrl());
+
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pokemon_name", listaPokemons.get(position).getNome());
+                editor.putString("pokemon_url", listaPokemons.get(position).getUrl());
+                editor.apply();
 
                 v.getContext().startActivity(intent);
             }

@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Btn_Entrar" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/PokemonName"
         android:layout_width="163dp"
         android:layout_height="31dp"
         android:layout_marginEnd="112dp"
@@ -78,7 +78,7 @@
         android:text="Digite o seu e-mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/PokemonName" />
 
     <EditText
         android:id="@+id/Txt_ConfirmEmail"
@@ -124,7 +124,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/PokemonName"
         app:srcCompat="@drawable/anime_pokemon_png_transparent" />
 
     <EditText

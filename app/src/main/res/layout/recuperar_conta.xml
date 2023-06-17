@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/PokemonName"
         android:layout_width="88dp"
         android:layout_height="42dp"
         android:fontFamily="@font/bangers"
@@ -51,7 +51,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Digite o seu Email"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/PokemonName"
         tools:layout_editor_absoluteX="100dp" />
 
     <EditText
@@ -77,7 +77,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/PokemonName"
         app:srcCompat="@drawable/anime_pokemon_png_transparent" />
 
     <TextView

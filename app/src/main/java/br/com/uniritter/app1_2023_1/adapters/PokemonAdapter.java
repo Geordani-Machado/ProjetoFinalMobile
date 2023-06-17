@@ -2,6 +2,7 @@ package br.com.uniritter.app1_2023_1.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,9 +17,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import br.com.uniritter.app1_2023_1.InicioActivity;
+import br.com.uniritter.app1_2023_1.ProcurarPokemonActivity;
 import br.com.uniritter.app1_2023_1.R;
 import br.com.uniritter.app1_2023_1.models.Pokemon;
 import br.com.uniritter.app1_2023_1.services.PokemonResult;
+import android.app.Activity;
 
 public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHolder> {
     private Context context;
@@ -59,6 +63,11 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
                         + "Url do pokemon" + listaPokemons.get(position).getUrl() + "/n"
                 );
 
+                Intent intent = new Intent(v.getContext(), InicioActivity.class);
+                intent.putExtra("Name",listaPokemons.get(position).getNome());
+                intent.putExtra("Url",listaPokemons.get(position).getUrl());
+
+                v.getContext().startActivity(intent);
             }
         });
     }

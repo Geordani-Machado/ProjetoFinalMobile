@@ -8,19 +8,23 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="118dp"
-        android:layout_height="49dp"
+        android:id="@+id/PokemonName"
+        android:layout_width="293dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/bangers"
         android:text="Plantinha"
-        android:textColor="#2196F3"
-        android:textSize="24sp"
+        android:textColor="#040404"
+        android:textSize="48sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/PokemonImg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.334"
+        app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.744"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="wrap_content"
@@ -32,72 +36,85 @@
         android:id="@+id/view2"
         android:layout_width="414dp"
         android:layout_height="68dp"
-        android:layout_marginTop="668dp"
-        android:background="#2196F3"
+        android:background="#FFC107"
         android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_sair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="49dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image__3_" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="95dp"
+        android:layout_width="119dp"
         android:layout_height="53dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/bangers"
-        android:text="10"
+        android:text="100"
         android:textColor="#000000"
         android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="56dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="45dp"
         android:layout_height="51dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/bangers"
         android:text="LV"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="45dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="112dp"
+        android:layout_height="54dp"
         android:fontFamily="@font/bangers"
         android:text="100"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="69dp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/myImageView"
+        android:id="@+id/PokemonImg"
         android:layout_width="221dp"
         android:layout_height="195dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="96dp"
+        android:contentDescription="pokemonImage"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="378dp"
-        tools:srcCompat="@tools:sample/avatars"
         tools:ignore="MissingConstraints"
-        android:contentDescription="pokemonImage" />
+        tools:srcCompat="@tools:sample/avatars" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,9 @@ package br.com.uniritter.app1_2023_1;
 import static br.com.uniritter.app1_2023_1.R.id.BtnVoltar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,11 +18,22 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private SharedPreferences sharedPreferences;
+
     private FirebaseAuth mAuth;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        boolean isSecondLogin = sharedPreferences.getBoolean("second_login", false);
+
+        if(isSecondLogin){
+            startActivity(new Intent(this, InicioActivity.class));
+            finish();
+        }
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -49,6 +62,8 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });

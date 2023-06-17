@@ -2,6 +2,7 @@ package br.com.uniritter.app1_2023_1.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
 
     @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         PokemonResult pokemon = listaPokemons.get(position);
         holder.PokemonName.setText(pokemon.getNome());
@@ -50,7 +51,16 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
                 .load(pokemon.getUrl())
                 .into(holder.PokemonImg);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("API", "Clicou no pokemon na posição:  " + position + "/n"
+                        + "Nome do pokemon: " + listaPokemons.get(position).getNome() + "/n"
+                        + "Url do pokemon" + listaPokemons.get(position).getUrl() + "/n"
+                );
 
+            }
+        });
     }
 
     @Override
@@ -68,6 +78,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
 
             PokemonImg = itemView.findViewById(R.id.Poke_img);
             PokemonName = itemView.findViewById(R.id.Poke_name);
+
         }
+
     }
 }
+

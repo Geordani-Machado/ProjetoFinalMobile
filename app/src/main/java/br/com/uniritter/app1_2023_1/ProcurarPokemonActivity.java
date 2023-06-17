@@ -33,7 +33,7 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<PokemonResult> PokemonLista = new ArrayList<>();
 
-    public static final String BASE_URL = "http://192.168.1.79:3000/";
+    public static final String BASE_URL = "http://192.168.146.237:3000/";
 
     // Create interceptor
 

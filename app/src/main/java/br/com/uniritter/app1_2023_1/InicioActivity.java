@@ -36,7 +36,9 @@ public class InicioActivity extends AppCompatActivity {
         String level = getIntent().getStringExtra("level");
 
         //Item em tela - Botoes de ação para brincar e alimentar o pokemon
-
+        ImageView bola = findViewById(R.id.Item_bola);
+        ImageView bala = findViewById(R.id.Item_bala);
+        ImageView tiglela = findViewById(R.id.Item_tigela);
 
         PokemonName.setText(name);
         PokemonLevel.setText(level);
@@ -80,6 +82,30 @@ public class InicioActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+
+        //criando evento para quando o usuario clica no item para alimentar ou brincar com o pokemon
+        bola.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        bala.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        tiglela.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
     }
 }

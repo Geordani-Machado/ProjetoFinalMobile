@@ -13,7 +13,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
+import br.com.uniritter.app1_2023_1.models.Pokemon;
+import br.com.uniritter.app1_2023_1.services.PokemonApiService;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class InicioActivity extends AppCompatActivity {
+
+    private void saveData(String id, String nome, int idade, int vida, String img){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://seu-servidor.com/") // Substitua pela URL do seu servidor
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        PokemonApiService apiService = retrofit.create(PokemonApiService.class);
+
+        Pokemon pokemon = new Pokemon(nome, img, idade,vida);
+
+        Call<Void> call = apiService.savePokemon(pokemon);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    // Dados salvos com sucesso
+                } else {
+                    // Tratar erro de requisição
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                // Tratar erro de conexão
+            }
+        });
+    }
+
 
     private SharedPreferences sharedPreferences;
 

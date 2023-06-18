@@ -6,11 +6,11 @@ public class Pokemon {
     private String Nome;
     private String Url;
 
-    private String Level;
+    private int Level;
 
-    private String Vida;
+    private int Vida;
 
-    public Pokemon(String nome, String url, String leval, String vida) {
+    public Pokemon(String nome, String url, int leval, int vida) {
         this.Nome = nome;
         this.Url = url;
         this.Level = leval;
@@ -26,9 +26,9 @@ public class Pokemon {
      return Url;
    }
 
-   public String getVida(){return Vida;};
+   public int getVida(){return Vida;};
 
-    public String getLevel(){return Level;};
+    public int getLevel(){return Level;};
 
 }
 

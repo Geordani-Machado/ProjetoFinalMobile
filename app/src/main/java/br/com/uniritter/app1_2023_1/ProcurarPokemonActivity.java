@@ -108,7 +108,7 @@ public class ProcurarPokemonActivity extends AppCompatActivity {
                     assert pokemonList != null;
                     for (PokemonResult pokemon : pokemonList) {
                         Log.d(TAG, "Nome: " + pokemon.getNome() + ", URL: " + pokemon.getUrl());
-                        PokemonResult nonsmoker = new PokemonResult(pokemon.getNome(),pokemon.getUrl());
+                        PokemonResult nonsmoker = new PokemonResult(pokemon.getNome(),pokemon.getUrl(),pokemon.getLevel(),pokemon.getVida());
                         PokemonLista.add(nonsmoker);
                         Log.d(TAG, "PokeLista: " + PokemonLista);
                     }

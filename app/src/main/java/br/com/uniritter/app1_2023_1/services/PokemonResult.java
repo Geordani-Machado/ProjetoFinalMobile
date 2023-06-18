@@ -14,10 +14,10 @@ public class PokemonResult {
     String nome;
 
     @SerializedName("idade")
-    Integer idade;
+    String level;
 
     @SerializedName("vida")
-    Integer vida;
+    String vida;
 
     @SerializedName("Img")
     String Img;
@@ -25,13 +25,16 @@ public class PokemonResult {
     @NonNull
     @Override
     public String toString(){
-        return this.id_pokemon+" -> "+this.nome+" url: "+this.Img;
-
+        return
+                " Nome: "+this.Img + " url: "+this.Img + " Level: "+this.level + " Vida: "+this.vida;
     }
 
-    public PokemonResult(String nome, String url) {
+    public PokemonResult(String nome, String url, String level, String vida) {
         this.nome = nome;
         this.Img = url;
+        this.level = level;
+        this.vida = vida;
+
     }
 
 
@@ -41,10 +44,10 @@ public class PokemonResult {
     public String getNome(){
         return nome;
     }
-    public Integer getIdade(){
-        return idade;
+    public String getLevel(){
+        return level;
     }
-    public Integer getVida(){
+    public String getVida(){
         return vida;
     }
     public String getUrl(){

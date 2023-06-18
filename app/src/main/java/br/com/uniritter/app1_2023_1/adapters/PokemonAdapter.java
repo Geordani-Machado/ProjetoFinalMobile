@@ -75,6 +75,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.MyViewHo
                 Intent intent = new Intent(v.getContext(), InicioActivity.class);
                 intent.putExtra("Name",listaPokemons.get(position).getNome());
                 intent.putExtra("Url",listaPokemons.get(position).getUrl());
+                intent.putExtra("Vida",listaPokemons.get(position).getVida());
+                intent.putExtra("level",listaPokemons.get(position).getLevel());
+
 
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("pokemon_name", listaPokemons.get(position).getNome());

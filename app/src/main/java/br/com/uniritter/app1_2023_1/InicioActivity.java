@@ -26,12 +26,21 @@ public class InicioActivity extends AppCompatActivity {
         Button btnSair = findViewById(R.id.btn_sair);
 
         TextView PokemonName = findViewById(R.id.PokemonName);
+        TextView PokemonLevel = findViewById(R.id.Pokemon_Level);
+        TextView PokemonVida = findViewById(R.id.Pokemon_vida);
 
 
         String name = getIntent().getStringExtra("Name");
         String Url = getIntent().getStringExtra("Url");
+        String vida = getIntent().getStringExtra("Vida");
+        String level = getIntent().getStringExtra("level");
+
+        //Item em tela - Botoes de ação para brincar e alimentar o pokemon
+
 
         PokemonName.setText(name);
+        PokemonLevel.setText(level);
+        PokemonVida.setText(vida);
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 

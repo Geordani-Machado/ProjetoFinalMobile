@@ -6,9 +6,15 @@ public class Pokemon {
     private String Nome;
     private String Url;
 
-    public Pokemon(String nome, String url) {
+    private String Level;
+
+    private String Vida;
+
+    public Pokemon(String nome, String url, String leval, String vida) {
         this.Nome = nome;
         this.Url = url;
+        this.Level = leval;
+        this.Vida = vida;
     }
 
     public String getNome() {
@@ -19,6 +25,10 @@ public class Pokemon {
    public String getUrl() {
      return Url;
    }
+
+   public String getVida(){return Vida;};
+
+    public String getLevel(){return Level;};
 
 }
 

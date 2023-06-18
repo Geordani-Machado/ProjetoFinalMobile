@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.762"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/Pokemon_Level"
         app:layout_constraintVertical_bias="0.744"
         tools:ignore="MissingConstraints" />
 
@@ -64,12 +64,12 @@
         app:srcCompat="@drawable/image__3_" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/Pokemon_vida"
         android:layout_width="119dp"
         android:layout_height="53dp"
         android:layout_marginTop="52dp"
         android:fontFamily="@font/bangers"
-        android:text="100"
+        android:text="vida"
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -90,15 +90,15 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/Pokemon_Level"
         android:layout_width="112dp"
         android:layout_height="54dp"
         android:fontFamily="@font/bangers"
-        android:text="1"
+        android:text="level"
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/Pokemon_vida"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -115,6 +115,36 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/Item_bola"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ball" />
+
+    <ImageView
+        android:id="@+id/Item_bala"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/Item_bola"
+        app:srcCompat="@drawable/image__5_" />
+
+    <ImageView
+        android:id="@+id/Item_tigela"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/Item_bala"
+        app:srcCompat="@drawable/tigela_editada" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
